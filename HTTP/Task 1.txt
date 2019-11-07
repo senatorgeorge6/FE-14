@@ -1,0 +1,22 @@
+1- Запрос от клиента : 
+1) GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1 - метод получения веб страницы, URI, версия протокола 1.1
+2) Host: gaia.cs.umass.edu - сервер
+3) Connection: keep-alive - тип соединения для обозначения кол-ва запросов и длительности до тайм-аута
+4) Cache-Control: max-age=0 - время актуальности ресурса = 0
+5) Upgrade-Insecure-Requests: 1 - сервер перенаправляет нас на защищенную версию сайта 
+6) User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36 OPR/64.0.3417.92  - конфигурации пользователя( ОС. браузер и тд)
+7) Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3  - можем запросить типы контента
+8) Accept-Encoding: gzip, deflate - сжатие
+9) Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7 - язык системы
+10) If-None-Match: "2ca-596bc33423538" - по этому номеру сервер применит ETAG
+11) If-Modified-Since: Thu, 07 Nov 2019 06:59:01 GMT - условие , которое обозначает, что если запрос ыл изменён после данного времени статус будет 200, а иначе 304
+
+2- Ответ от сервера
+
+1) HTTP/1.1 304 Not Modified - весрия протокола 1.1, 
+2) Date: Thu, 07 Nov 2019 18:27:50 GMT - время создания ответа
+3) Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3 - сервер на котором распологается ресурс
+4) Connection: Keep-Alive 
+5) Keep-Alive: timeout=5, max=100 - время ответа до 5 сек. кол-во запрсов до 100
+6) ETag: "2ca-596bc33423538" - хеш
+ 
